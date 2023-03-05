@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
 
 @interface ViewController ()
 
@@ -15,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+//    UIViewController *cont = [[UIViewController alloc]initWithNibName:@"myNib" bundle:[NSBundle mainBundle]];
+    Person *person = [[Person alloc]init];
+    Person *person2 = [Person new];             // the same as above alloc-init
+    [person printName];
+    
+    Person *person3 = [[Person alloc]initWithFirstName:@"Petey" lastName:@"McFreedy"];
+    [person3 printName];
 }
 
 
